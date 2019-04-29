@@ -1,80 +1,73 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<title>Bootstrap</title>
-	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet"> 
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-	<link rel="stylesheet" type="text/css" href="style.css">
-</head>
-<body>
-	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="#">Navbar</a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-	    <span class="navbar-toggler-icon"></span>
-	  </button>
-
-	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-	    <ul class="navbar-nav mr-auto">
-	      <li class="nav-item active">
-	        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link" href="#">Link</a>
-	      </li>
-	      <li class="nav-item dropdown">
-	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-	          Dropdown
-	        </a>
-	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-	          <a class="dropdown-item" href="#">Action</a>
-	          <a class="dropdown-item" href="#">Another action</a>
-	          <div class="dropdown-divider"></div>
-	          <a class="dropdown-item" href="#">Something else here</a>
-	        </div>
-	      </li>
-	      <li class="nav-item">
-	        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-	      </li>
-	    </ul>
-	    <form class="form-inline my-2 my-lg-0">
-	      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-	      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-	    </form>
-	  </div>
-	</nav>
-
-	<div class="jumbotron">
-	  <h1 class="display-4">Mountaineering!</h1>
-	  <p class="lead"></p>
-	  <hr class="my-4">
-
-	  <!-- Begin Mailchimp Signup Form -->
-		<link href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<html lang="en">
+	<head>
+		<title>My Calendar</title>
 		<style type="text/css">
-			#mc_embed_signup{ clear:left; font:14px Helvetica,Arial,sans-serif; }
-			/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-			   We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-		</style>
-		<div id="mc_embed_signup">
-		<form action="https://yahoo.us20.list-manage.com/subscribe/post?u=12474851cf43aed1aa60cb069&amp;id=d47dd57240" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-		    <div id="mc_embed_signup_scroll">
+			body {
+			text-align: center;
+			background-color:#FC5151;
 			
-		    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-		    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_12474851cf43aed1aa60cb069_d47dd57240" tabindex="-1" value=""></div>
-		    <div class="clear">
-		    	<input type="submit" value="Find out More" name="subscribe" id="mc-embedded-subscribe" class="btn btn-info btn-lg" href="#" role="button"></div>
-		    </div>
-		</form>
-		</div>
+			}
+			form {
+			display: inline-block;
+			}
+			table {
+			background-color: #A1FE88;
+			border: 1px solid black;
+			border-collapse: collapse;
+			margin-top: .5rem;
+			}
+			
+			th {
+			border: 1px solid black;
+			padding: 6px;
+			font-weight: bold;
+			background: #ccc;
+			}
+			td {
+			border: 1px solid black;
+			padding: 6px;
+			vertical-align: top;
+			width: 100px;
+			}
+			.master {
+			background-color:#FC5151;
+			margin: auto;
+			border-collapse: collapse;
+			border: 0;
+			padding: 1rem;
+			}
+		</style>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	</head>
+	<body>
+		<h1>Calendar</h1>
+		
+		<form id="datePicker"><h3>Select a Year to Display:</h3></form> 
+		<form id="eventDate" style="margin-left: 20px; padding-left: 10px;border-left: 1px solid black;"><h3>Event: </h3></form>
 
-		<!--End mc_embed_signup-->
-	
-	</div>
-
-	
-
-	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+		<table class="master">
+			<tr>
+				<td class="master"><div id="1" class="myCal"></div></td>
+				<td class="master"><div id="2" class="myCal"></div></td>
+				<td class="master"><div id="3" class="myCal"></div></td>
+			</tr>
+			<tr>
+				<td class="master"><div id="4" class="myCal"></div></td>
+				<td class="master"><div id="5" class="myCal"></div></td>
+				<td class="master"><div id="6" class="myCal"></div></td>
+			</tr>	
+			<tr>
+				<td class="master"><div id="7" class="myCal"></div></td>
+				<td class="master"><div id="8" class="myCal"></div></td>
+				<td class="master"><div id="9" class="myCal"></div></td>
+			</tr>
+			<tr>
+				<td class="master"><div id="10" class="myCal"></div></td>
+				<td class="master"><div id="11" class="myCal"></div></td>
+				<td class="master"><div id="12" class="myCal"></div></td>
+			</tr>	
+		</table>
+		<script src="calendar_functions.js"></script>
+	</body>
 </html>
